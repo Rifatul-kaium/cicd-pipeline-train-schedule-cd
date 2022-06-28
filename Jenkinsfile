@@ -8,6 +8,11 @@ pipeline {
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
         }
+        stage('MY stage') {
+            steps {
+                echo 'I can build automation'
+            }
+        }
         stage('DeployToStaging') {
             when {
                 branch 'master'
